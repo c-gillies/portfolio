@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./resources/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>Cyrus Gillies</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+
+    <!-- Nav -->
+
+      <!-- Left nav -->
+    <nav class="fixed-nav">
+      <div class="nav-left">
+        <h1 class="name">
+          <a href="#">Cyrus Gillies</a>
+      </div>
+
+      <!-- Hamburger menu -->
+       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+       </button>
+
+      <!-- Nav menu -->
+      <div class="nav-menu">
+        <a href="#" class="nav-button" id="current-nav">Home</a>
+        <a href="portfolio.html" class="nav-button">Portfolio</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main -->
+  <main>
+    <section class="content">
+
+      <!-- About -->
+      <div class="content-container about-head">
+        <h2 class="content-top-text">Hi, I'm Cyrus</h2>
+        <div class="list-and-image">  
+          <ul class="unordered-list">
+            <li>I currently work as a Technical Support Specialist with Fullscript</li>
+            <li>I'm fairly new to coding, and am currrently dabbling in HTML, CSS, and Javascript</li>
+            <li>I'm about to start learning about Javascript frameworks - specifically React</li>
+            <li>I live with my partner, Jeff, and our three pets: Ellie, Miss Kitty, and Frankie</li>
+            <li>My interests include cooking, hiking, gaming, and reading</li>
+          </ul>
+          <img class="smoothie" src="./resources/images/smoothie-moment.png" alt="A photo of me, Cyrus, sipping from my makeshift smoothie vessel.">
+        </div>
+  </main>
+  
+  <!-- Burger script (mmm burger) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+  
+      hamburger.addEventListener('click', function() {
+        hamburger.setAttribute('aria-expanded', hamburger.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        navMenu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

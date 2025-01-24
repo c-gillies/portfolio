@@ -1,0 +1,264 @@
+/* Universal Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(12px, 1.2vw, 18px);
+    font-family: "Mulish";
+    background-color: #041817;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+.unordered-list {
+    color: #e2eaea;
+    text-shadow: 1px 1px black;
+}
+
+.rounded-button {
+    background-color: transparent;
+    border: 2px solid #e2eaea;
+    border-radius: 50px;
+    color: #e2eaea;
+    font-weight: 400;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-left: 1.5rem;
+    text-align: center;
+    width: 10rem;
+}
+
+.rounded-button:hover {
+    background-color: #4f3926;
+}
+
+/* Header */
+
+.fixed-nav {
+    align-items: center;
+    background-color: #47264f;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #e2eaea;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    margin-top: 0;
+    position: fixed;
+    width: 100%;
+   
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.logo-container,
+.logo {
+    height: 4rem;
+    width: 3rem;
+}
+
+
+.name {
+    font-family: "Exo 2", sans-serif;
+    text-shadow: 1px 1px black;
+    font-weight: 500;
+    margin-left: 1vh;
+}
+
+.nav-menu {
+    margin-right: 1rem;
+}
+
+.nav-menu:hover {
+    cursor: default;
+}
+
+.nav-button {
+    display: inline;
+    padding: 0.2rem 0.8rem;
+    margin: 0.5rem;
+    border: 0.1rem solid #e2eaea;
+    border-radius: 0.2rem;
+}
+
+.nav-button:hover {
+    color: #541363;
+    background-color: #e2eaea;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#current-nav:link {
+    color: #541363;
+    background-color: #e2eaea;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#current-nav:visited {
+    color: #541363;
+    background-color: #e2eaea;
+}
+
+#current-nav:hover {
+    color: #541363;
+    background-color: #e2eaea ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+    /* Hamburger */
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 2rem;
+        width: 3rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 100%;
+        height: 0.25rem;
+        background-color: #e2eaea;
+    }
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+}
+
+.content, .about {
+    border-radius: 5px;
+}
+
+.content{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5%;
+    margin: 5vh;
+    width: 80%;
+    height: 51%
+}
+
+.content-container {
+    background-color: #250732;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    padding-bottom: 7vh;
+}
+
+
+.content-top-text {
+    padding: 1vh 0 0 4vh;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.list-and-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5vh;
+}
+
+.list-and-image .smoothie {
+    max-width: 25%;
+    border-radius: 5px;
+    border: 3px solid #fafafa;
+}
+
+.unordered-list li {
+    margin: 4vh;
+}
+
+ul a {
+    color: rgb(174, 80, 205);
+}
+
+/* Media queries */
+
+@media (max-width: 1180px) {
+    .list-and-image {
+        padding: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 937px) {
+    .list-and-image .smoothie {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        background-color: #47264f;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-menu a {
+        border: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    .unordered-list li {
+        margin: 2vh;
+    }
+    .content {
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        height: 51%;
+    }
+}
